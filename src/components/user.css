@@ -1,0 +1,109 @@
+.user{
+    /* border: 2px solid red; */
+    padding: 2rem 4rem;
+}
+.user>h1{
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 2.3rem;
+}
+.user>p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.user>.gender{
+    /* border: 2px solid red; */
+    display: flex;
+    height: 6svh;
+    margin: 1rem 0;
+}
+.user>.gender>.radio{
+    /* border: 2px solid red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 10rem;
+}
+.user>.gender>.radio>input{
+    height: 15px;
+    width: 15px;
+    margin-right: .3rem;
+}
+.user>.gender>.radio>label{
+    font-size: 1.2rem;
+}
+.user>.user-nav{
+    /* border: 2px solid red; */
+    display: flex;
+    height: 7svh;
+    /* margin: 1rem 0; */
+    background-color: darkblue;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.user>.user-nav>.img{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 21%;
+    padding-left: .3rem;
+}
+.user>.user-nav>.name{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 24%;
+}
+.user>.user-nav>.email{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.user>.user-nav>.gen{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+.user>.user-data{
+    /* border: 2px solid red; */
+    display: flex;
+    height: 22svh;
+    font-size: 1.05rem;
+    border-bottom: 1px solid;
+    
+}
+.user>.user-data>.img-data{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 21%;
+    padding-left: .3rem;
+}
+.user>.user-data>.img-data>img{
+    /* border: 2px solid red; */
+    height: 93%;
+    width: 8rem;
+}
+.user>.user-data>.name-data{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 24%;
+}
+.user>.user-data>.email-data{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.user>.user-data>.gen-data{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    width: 15%;
+    text-transform: capitalize;
+}

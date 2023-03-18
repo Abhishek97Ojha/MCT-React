@@ -1,0 +1,32 @@
+.navbar{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 11svh;
+    background-color: black;
+}
+.navbar >a{
+    margin-right: 5rem;
+    text-decoration: none;
+    color: white;
+    /* border: 2px solid ; */
+    width: 6.2rem;
+    height: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar >a:hover{
+    transform: scale(1.1);
+    color: black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+.navbar >a:active{
+    transform: translateY(0.1px);
+}
+.navbar a >h3{
+    font-weight: 400;
+    font-size: 1.35rem;
+}

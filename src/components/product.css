@@ -1,0 +1,28 @@
+.products{
+    /* border: 2px solid red; */
+    height: 89svh;
+    display: flex;
+}
+.products >.left{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 25%;
+    background-color: black;
+    color: white;
+} 
+.products >.right{
+    border: 2px solid red;
+    height: 100%;
+    width: 75%;
+} 
+.products >.left>.category{
+    /* border: 2px solid red; */
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products >.left>.category>p{
+    text-transform: capitalize;
+    font-size:1.25rem;
+}
