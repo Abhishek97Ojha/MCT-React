@@ -1,16 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useContext} from "react";
 import "./user.css";
 import Navbar from "./Navbar";
 import { getUserData } from "../functions/GetUserData";
-
+import { useDispatch ,useSelector} from "react-redux";
+import { allGender, femaleGender, maleGender } from "../redux/action";
+import { MyContext } from "../App";
+// export const arr= getUserData()
 const User = () => {
-  const [user, setUser] = useState("");
-  const [gender, setGender] = useState("");
+  const context = useContext(MyContext);
+  const [filter, setFilter] = useState({
+		all: true,
+		male: false,
+		female: false,
+	});
+  
+  // const [gender, setGender] = useState("all");
   useEffect(() => {
-    getUserData(setUser,gender);
-  }, [gender]);
+    getUserData(context.setUser);
+  },[context.setUser]);
+  const myState = useSelector((state)=> state.userData)
+  const dispatch = useDispatch();
   return (
     <>
+    {/* {console.log("myState",myState,context.user)} */}
       <Navbar />
       <div className="user">
         <h1>User Details</h1>
@@ -28,36 +40,57 @@ const User = () => {
         <div className="gender">
           <div className="radio">
             <input
+              checked={filter.all}
               type="radio"
               name="gender"
               id="all"
               value="all"
-              onChange={(e) => {
-                setGender(e.target.value);
+              onChange={() => {
+                setFilter({
+									...filter,
+									male: false,
+									female: false,
+									all: true,
+								})
+                dispatch(allGender(context.user))
               }}
             />
             <label htmlFor="all">All</label>
           </div>
           <div className="radio">
             <input
+            checked={filter.male}
               type="radio"
               name="gender"
               id="male"
               value="male"
-              onChange={(e) => {
-                setGender(e.target.value);
+              onChange={() => {
+                setFilter({
+									...filter,
+									male: true,
+									all: false,
+									female: false,
+								})
+                dispatch(maleGender(context.user))
               }}
             />
             <label htmlFor="male">Male</label>
           </div>
           <div className="radio">
             <input
+            checked={filter.female}
               type="radio"
               name="gender"
               id="female"
               value="female"
-              onChange={(e) => {
-                setGender(e.target.value);
+              onChange={() => {
+                setFilter({
+									...filter,
+									female: true,
+									all: false,
+									male: false,
+								})
+                dispatch(femaleGender(context.user))
               }}
             />
             <label htmlFor="female">Female</label>
@@ -69,11 +102,27 @@ const User = () => {
           <p className="email">EMAIL</p>
           <p className="gen">GENDER</p>
         </div>
-        {user &&
-          user.map((ele) => {
-            if (ele.gender) {
-              return (
+        {context.user&&myState.length===0?
+           context.user.map((ele) => {
+              return(
                 <div className="user-data">
+                    <div className="img-data">
+                      <img src={ele && ele.picture.large} alt="" />
+                    </div>
+                    <div className="name-data">
+                      {ele && ele.name.first}&nbsp;{ele && ele.name.last}
+                    </div>
+                    <div className="email-data">{ele && ele.email}</div>
+                    <div className="gen-data">{ele && ele.gender}</div>
+                  </div>
+              )
+            })
+        
+        :
+          myState &&
+          myState.map((ele) => {
+            return(
+              <div className="user-data">
                   <div className="img-data">
                     <img src={ele && ele.picture.large} alt="" />
                   </div>
@@ -83,10 +132,10 @@ const User = () => {
                   <div className="email-data">{ele && ele.email}</div>
                   <div className="gen-data">{ele && ele.gender}</div>
                 </div>
-              );
-            }
-            return ele;
+            )
           })}
+        
+        
       </div>
     </>
   );

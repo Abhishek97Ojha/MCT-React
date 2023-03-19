@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
-    const navigate = useNavigate();
+  useEffect(() => {
+    localStorage.setItem("emailData", "abc@gmail.com");
+    localStorage.setItem("passwordData", "12345");
+  }, []);
+
+  const email = useRef();
+  const password = useRef();
+  const getEmail = localStorage.getItem("emailData");
+  const getPassword = localStorage.getItem("passwordData");
+  // const handleSubmit = () => {
+
+  // };
+  const navigate = useNavigate();
   return (
     <div className="login">
       <div className="left">
@@ -16,9 +28,9 @@ const Login = () => {
         <div className="middle">
           <div className="login-details">
             <h3>EMAIL</h3>
-            <input type="text" />
+            <input type="text" ref={email} />
             <h3>PASSWORD</h3>
-            <input type="text" />
+            <input type="password" ref={password} />
           </div>
           <div className="remember-me">
             <div className="left">
@@ -30,9 +42,21 @@ const Login = () => {
             </div>
           </div>
           <div className="button">
-            <button className="login-btn" onClick={()=>{
-                navigate("/home")
-            }}>LOGIN</button>
+            <button
+              className="login-btn"
+              onClick={() => {
+                if (
+                  email.current.value === "abc@gmail.com" &&
+                  password.current.value === "12345"
+                ) {
+                  navigate("/home");
+                } else {
+                  alert("Enter Correct Email and Password");
+                }
+              }}
+            >
+              LOGIN
+            </button>
             <button>CREATE ACCOUNT</button>
           </div>
         </div>

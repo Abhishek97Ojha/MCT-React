@@ -10,19 +10,20 @@ import { getProductCategories } from "./functions/GetProducts";
 export const MyContext = createContext();
 function App() {
   const [categories, setCategories] = useState([]);
+  const [user, setUser] = useState("");
   
   useEffect(() => {
     getProductCategories(setCategories);
   }, []);
   return (
-    <MyContext.Provider value={{ categories: categories }}>
+    <MyContext.Provider value={{ categories: categories ,user:user,setUser:setUser}}>
       <div className="App">
         {/* <Login /> */}
         {/* {console.log(categories)} */}
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/products/:category" element={<Product />}></Route>
+          <Route path="/products" element={<Product />}></Route>
           <Route path="/users" element={<User />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
         </Routes>
