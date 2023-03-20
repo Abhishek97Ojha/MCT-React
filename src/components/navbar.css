@@ -30,4 +30,19 @@
     font-weight: 400;
     font-size: 1.35rem;
 }
+@media only screen and (max-width: 770px){
+    .navbar >a{
+        margin-right: 3rem;
+    }
+}
+@media only screen and (max-width: 430px){
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 20svh;
+    }
+    .navbar >a{
+        margin-right: 0;
+    }
+}
 

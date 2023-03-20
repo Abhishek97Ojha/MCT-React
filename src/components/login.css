@@ -133,3 +133,40 @@
     background-image: url("https://images.squarespace-cdn.com/content/v1/61fc35559eb62e4b37b4c3f2/b4ddf8f4-4990-4f42-93c7-954742440b23/unsplash-image-BS-Uxe8wU5Y.jpg?format=2500w");
     background-size: 100% 100%;
 }
+@media only screen and (max-width: 915px){
+    .login>.left{
+        /* border: 2px solid; */
+        width: 100%;
+    }
+    .login>.right{
+        display: none;
+    }
+    /* .login >.left >.middle{
+        height: 30%;
+    } */
+}
+@media only screen and (max-width: 770px){
+    .login>.left{
+        /* border: 2px solid; */
+        width: 100%;
+    }
+    .login>.right{
+        display: none;
+    }
+    /* .login >.left >.middle{
+        height: 30%;
+    } */
+}
+@media only screen and (max-width: 430px){
+    .login>.left{
+        /* border: 2px solid; */
+        width: 100%;
+    }
+    .login>.right{
+        display: none;
+    }
+    .login >.left >.middle{
+        /* border: 2px solid; */
+        height: 30%;
+    }
+}

@@ -89,6 +89,9 @@
     height: 93%;
     width: 8rem;
 }
+.user-label{
+    display: none;
+}
 .user>.user-data>.name-data{
     /* border: 2px solid red; */
     display: flex;
@@ -108,4 +111,34 @@
     align-items: center;
     width: 15%;
     text-transform: capitalize;
+}
+@media only screen and (max-width: 430px){
+    .user{
+        padding: 2rem 1rem;
+    }
+    .user-label{
+        display: inline;
+    }
+    .user>.user-data>.name-data{
+        /* border:2px solid; */
+        width: 100%;
+    }
+    .user>.user-data>.email-data{
+        /* border:2px solid; */
+        width: 100%;
+    }
+    .user>.user-data>.gen-data{
+        /* border:2px solid; */
+        width: 100%;
+    }
+    .user>.user-data{
+        flex-direction: column;
+        height: 25svh;
+        font-size: 1.35rem;
+        font-weight: 600;
+    }
+    .user>.user-nav>.img,.user>.user-nav>.name,.user>.user-nav>.email,.user>.user-nav>.gender{
+        width:25%;
+        padding-left: .5rem;
+    }
 }

@@ -9,3 +9,8 @@
     text-align: center;
     color: #d430b4;
 }
+@media only screen and (max-width: 430px){
+    .contact{
+        height: 80svh
+    }
+}

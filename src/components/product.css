@@ -9,6 +9,8 @@
     width: 25%;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
 } 
 
 .products >.left>.category{
@@ -64,4 +66,41 @@
 .products >.right>ul>a>li{
     font-size: 1.3rem;
     font-weight: 500;
+}
+@media only screen and (max-width: 770px){
+    .products >.left>.category>a{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 430px){
+    .products{
+        height: 80svh;
+        flex-direction: column;
+    }
+    
+    .products >.left{
+        width: 100%;
+        height:30svh;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .products >.left>.category{
+        width: 50%;
+        height:50%;
+    }
+    .products >.right{
+        width: 100%;
+        /* height: 30svh; */
+        overflow-y: auto;
+        margin-top: .5rem;
+    }
+    .products >.right>ul>a{
+        text-align: justify;
+    }
+    .products >.right>ul{
+        padding: 1rem 2.5rem;
+    }
+    .products >.left>.category>a{
+        width: 100%;
+    }
 }
