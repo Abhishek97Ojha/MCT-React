@@ -6,24 +6,30 @@ import Product from "./components/Product";
 import User from "./components/User";
 import ContactUs from "./components/ContactUs";
 import { createContext, useEffect, useState } from "react";
-import { getProductCategories } from "./functions/GetProducts";
+
+import ProductDetails from "./components/ProductDetails";
 export const MyContext = createContext();
 function App() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState("electronics");
+  const [productCategory, setProductCategory] = useState([])
   const [user, setUser] = useState("");
+  const [productList, setProductList] = useState([])
+
   
-  useEffect(() => {
-    getProductCategories(setCategories);
-  }, []);
   return (
-    <MyContext.Provider value={{ categories: categories ,user:user,setUser:setUser}}>
+    <MyContext.Provider
+      value={{ categories: categories,setCategories:setCategories,productCategory:productCategory,setProductCategory:setProductCategory, user: user, setUser: setUser,productList:productList, setProductList:setProductList}}
+    >
       <div className="App">
         {/* <Login /> */}
         {/* {console.log(categories)} */}
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/products" element={<Product />}></Route>
+          <Route path="/products" element={<Product />}>
+            <Route path="/products:category" element={<Product />}></Route>
+          </Route>
+          <Route path="/productDetails/:id" element={<ProductDetails /> }/>
           <Route path="/users" element={<User />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
         </Routes>

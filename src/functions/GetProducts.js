@@ -1,5 +1,10 @@
-export async function getProductCategories(setCategories){
+export async function getProductCategories(setProductCategory){
     const response = await fetch("https://fakestoreapi.com/products/categories")
     const data = await response.json();
-    setCategories(data)
-}  
+    setProductCategory(data)
+} 
+export async function getProductList(setProductList,categories){
+    const response= await fetch(`https://fakestoreapi.com/products/category/${categories}`)
+    const data= await response.json();
+    setProductList(data)
+}

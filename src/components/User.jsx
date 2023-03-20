@@ -13,8 +13,7 @@ const User = () => {
 		male: false,
 		female: false,
 	});
-  
-  // const [gender, setGender] = useState("all");
+
   useEffect(() => {
     getUserData(context.setUser);
   },[context.setUser]);

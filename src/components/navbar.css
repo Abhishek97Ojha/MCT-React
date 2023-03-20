@@ -30,25 +30,4 @@
     font-weight: 400;
     font-size: 1.35rem;
 }
-.navbar >.logout{
-    width: 6.2rem;
-    height: 2.3rem;
-    margin-right: 5rem;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.navbar>.logout>h3{
-    font-weight: 400;
-    font-size: 1.35rem;
-}
-.navbar >.logout:hover{
-    transform: scale(1.1);
-    color: black;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.37);
-}
-.navbar >.logout:active{
-    transform: translateY(0.1px);
-}
+

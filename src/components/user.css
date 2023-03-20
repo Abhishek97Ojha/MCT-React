@@ -29,6 +29,7 @@
     height: 15px;
     width: 15px;
     margin-right: .3rem;
+    cursor: pointer;
 }
 .user>.gender>.radio>label{
     font-size: 1.2rem;

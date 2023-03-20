@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# MCT React Project 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using HTML, CSS , JS , React JS, React-Router and Redux.
 
-## Available Scripts
+## Hosted Link
 
-In the project directory, you can run:
+Open [https://mct-react.vercel.app/](https://mct-react.vercel.app/) to view it in your browser.
 
-### `npm start`
+## Github Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://github.com/Abhishek97Ojha/MCT-React](https://github.com/Abhishek97Ojha/MCT-React) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Library Used :
+- React *("^18.2.0")*
+- React-Dom *("^18.2.0")*
+- React-Scripts *("5.0.1")*
+- React-Redux *("^8.0.5")*
+- React-Router-Dom *("^6.9.0")*
+- Redux *("^4.2.1")*
 
-### `npm test`
+## Hooks Used :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- createContext
+- useState
+- useContext
+- useEffect
+- useDispatch 
+- useSelector
+- useNavigate
+- useParams
+- useRef, etc.
 
-### `npm run build`
+## Credential
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Email : "abc@gmail.com"**
+**Password : "12345"**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## App contains following Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Home Component
+* Product Component
+* User Component
+* ContactUs Component
+* Login Component
+* ProductDetails Component
+* Navbar Component
 
-### `npm run eject`
+##  Description :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Implemented a React App With the Filtering Feature and Implement the Routing,Context API and use Redux for the State Management.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Whenever Application Starts, It Shows the Login page and After entering the Credentials and on clicking login button, If Credentials are Valid then it will Navigate to the the Home Page or else it will show alert message to enter correct email and password.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*  In this App, following Api are used :
+    * https://fakestoreapi.com/products/categories
+    * https://randomuser.me/api/?results=20
 
-## Learn More
+* On Clicking on Product in Navbar,Then it will Navigate to the Products page. There categories and different products are shown.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* On Clicking on any product name, it will Navigate to the Product Details Component and shows the details of the Entire Product.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* On Clicking on Users in Navbar, it will Navigate to Users page and to view the user list and user list can be filtered by gender    male and female.
 
-### Code Splitting
+* On Clicking on Contact in Navbar , it Shows Contact Component Is Under Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* On Clicking on the Logout Button , then it will Navigate to the Login Screen.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Thank You !!!
