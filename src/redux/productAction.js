@@ -1,5 +1,6 @@
+// productData action
 export const productData = () => {
 	return {
-		type: "USER_DATA"
+		type: "PRODUCT_DATA"
 	};
 };

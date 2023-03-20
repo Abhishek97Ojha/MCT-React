@@ -1,5 +1,6 @@
-// import { arr } from "../components/User";
 const initialState = [];
+
+//Filtering user-data
 const userData = (state = initialState, action) => {
   switch (action.type) {
     case "ALL":

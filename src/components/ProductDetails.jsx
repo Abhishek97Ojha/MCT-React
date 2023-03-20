@@ -4,17 +4,21 @@ import "./productDetails.css";
 import { useSelector } from "react-redux";
 const ProductDetails = () => {
   const navigate = useNavigate();
+
+  // Getting Product Details from Redux Store
   const myState = useSelector((state) => state.productReducer);
   console.log(myState);
   const { id } = useParams();
   const [productDetails, setProductDetails] = useState({});
+  
+  // Getting Product Details by their Id
   useEffect(() => {
     setProductDetails(
       myState.productsData.find((ele) => {
         return ele.id === +id;
       })
     );
-  }, []);
+  }, [id,myState.productsData]);
 
   return (
     <>

@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-// import { MyContext } from '../App'
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  // This function will navigate to login page and will clear local storage 
   const handleClick = () => {
     localStorage.clear();
     navigate("/");
   };
+
+  // This useEffect is used to manage history
   useEffect(() => {
     window.addEventListener("popstate", (e) => {
       window.history.go(1);
@@ -31,9 +34,6 @@ const Navbar = () => {
       <Link to="/" className="link" onClick={handleClick}>
         <h3>LogOut</h3>
       </Link>
-      {/* <button className="logout" onClick={handleClick}>
-        <h3>LogOut</h3>
-      </button> */}
     </div>
   );
 };

@@ -1,19 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+
+// Adding Login Credentials in Local Storage
 const Login = () => {
   useEffect(() => {
     localStorage.setItem("emailData", "abc@gmail.com");
     localStorage.setItem("passwordData", "12345");
   }, []);
 
+// UseRef Hook used to persist values of email and password input
   const email = useRef();
   const password = useRef();
   const getEmail = localStorage.getItem("emailData");
   const getPassword = localStorage.getItem("passwordData");
-  // const handleSubmit = () => {
-
-  // };
+ 
   const navigate = useNavigate();
   return (
     <div className="login">
@@ -44,9 +45,10 @@ const Login = () => {
           <div className="button">
             <button
               className="login-btn"
+              // Onclick of login button checking credentials
               onClick={() => {
                 if (
-                  email.current.value === "abc@gmail.com" &&
+                  email.current.value === "abc@gmail.com" &&  
                   password.current.value === "12345"
                 ) {
                   navigate("/home");

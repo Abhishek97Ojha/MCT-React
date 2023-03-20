@@ -14,14 +14,16 @@ const User = () => {
 		female: false,
 	});
 
+  // getUserData function which will fetch data from api provided
   useEffect(() => {
     getUserData(context.setUser);
   },[context.setUser]);
+
+  // Getting data from Redux Store by Filtering user-data in reducer 
   const myState = useSelector((state)=> state.userData)
   const dispatch = useDispatch();
   return (
     <>
-    {/* {console.log("myState",myState,context.user)} */}
       <Navbar />
       <div className="user">
         <h1>User Details</h1>
@@ -51,6 +53,7 @@ const User = () => {
 									female: false,
 									all: true,
 								})
+                // Using action allGender
                 dispatch(allGender(context.user))
               }}
             />
@@ -70,6 +73,7 @@ const User = () => {
 									all: false,
 									female: false,
 								})
+                // Using action maleGender
                 dispatch(maleGender(context.user))
               }}
             />
@@ -89,6 +93,7 @@ const User = () => {
 									all: false,
 									male: false,
 								})
+                // Using action femaleGender
                 dispatch(femaleGender(context.user))
               }}
             />
