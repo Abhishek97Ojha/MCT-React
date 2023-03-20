@@ -134,8 +134,8 @@
     .user>.user-data{
         flex-direction: column;
         height: 25svh;
-        font-size: 1.35rem;
-        font-weight: 600;
+        font-size: 1.25rem;
+        font-weight: 500;
     }
     .user>.user-nav>.img,.user>.user-nav>.name,.user>.user-nav>.email,.user>.user-nav>.gender{
         width:25%;
