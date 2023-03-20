@@ -42,6 +42,21 @@
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 5px;
   }
+  @media only screen and (max-width: 550px){
+    .home{
+      padding: 0;
+      height: 89svh;
+    }
+    .home>h1{
+      margin: .5rem 0;
+      font-size: 2.7rem;
+      font-weight: 600;
+    }
+    .home >p{
+      margin: .5rem 1rem;
+      font-size: 1.2rem;
+    }
+  }
   @media only screen and (max-width: 430px){
     .home{
       padding: 0;
